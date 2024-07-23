@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blockchain EHR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 800px;
+            width: 100%;
+            /* overflow: auto; Enable scrolling within the container */
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        h2 {
+            margin-bottom: 15px;
+            color: #34495e;
+        }
+        form {
+            margin: 20px 0;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #34495e;
+            font-weight: 500;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        textarea {
+            resize: vertical;
+            height: 100%;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #3498db;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .results {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .record {
+            background-color: #ecf0f1;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .record h3 {
+            margin: 0;
+            color: #2c3e50;
+        }
+        .record p {
+            margin: 5px 0;
+            color: #34495e;
+        }
+        #recordsTable {
+            margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        #recordsTable th, #recordsTable td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        #recordsTable th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <script defer src="addRec.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Decentralised Health-database System</h1>
+
+        <h2>Add Record</h2>
+        <form id="addRecordForm" class="addRecordForm">
+            <label for="doctorAddressRecord">Personnel Address</label>
+            <input type="text" id="doctorAddressRecord" placeholder="Personnel Address" required>
+            <label for="patientAddress">Patient Address</label>
+            <input type="text" id="patientAddress" placeholder="Patient Address" required>
+            <label for="patientName">Patient Name</label>
+            <input type="text" id="patientName" placeholder="Patient Name" required>
+            <label for="data">Data</label>
+            <input type="text" id="data" placeholder="Data" required>
+            <button type="submit">Add Record</button>
+        </form>
+
+        <a href="get_record.html">Get Record</a>
+
+    </div>
+</body>
+</html>
